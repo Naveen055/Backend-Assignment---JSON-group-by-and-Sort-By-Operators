@@ -1,4 +1,3 @@
-```markdown
 # JSON Group By and Sort By Operators
 
 ## Overview
