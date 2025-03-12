@@ -39,6 +39,8 @@ Ensure you have the following installed:
 ### Clone the repository
 ```bash
 git clone https://github.com/your-username/json-groupby-sort.git
+```
+```bash
 cd json-groupby-sort
 ```
 
