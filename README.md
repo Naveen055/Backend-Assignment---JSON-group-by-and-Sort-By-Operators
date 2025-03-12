@@ -73,7 +73,7 @@ mvn spring-boot:run
 ## API Endpoints
 
 ### Insert a Record
-- **Endpoint:** `POST /api/dataset/{datasetName}/record`
+- **Endpoint:** `POST http://localhost:8080/api/dataset/sampleDataset/record`
 - **Request Body (JSON):**
 ```json
 {
