@@ -110,6 +110,7 @@ This API allows querying a specific dataset and performing group-by and sort-by 
     "Bangalore": [
       { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" }
     ]
+  }
 }
 ```
 
