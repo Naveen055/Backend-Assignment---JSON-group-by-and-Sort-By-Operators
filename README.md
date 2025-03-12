@@ -78,6 +78,7 @@ The application will start on `http://localhost:8080`
 - **Request Body (JSON):**
 ```json
 {
+  "id": 1,
   "name": "Naveen",
   "age": 22,
   "city": "Bangalore"
@@ -99,51 +100,42 @@ This API allows querying a specific dataset and performing group-by and sort-by 
 
 #### 1. Group By
 - **Endpoint:** `GET /api/dataset/{datasetName}/query?groupBy={field}`
-- **Example:** `/api/dataset/sampleDataset/query?groupBy=city`
+- **Example:** `http://localhost:8080/api/dataset/sampleDataset/query?groupBy=city`
 - **Response:**
 ```json
 {
   "groupedRecords": {
     "Bangalore": [
-      { "name": "Naveen", "age": 22, "city": "Bangalore" }
-    ],
-    "Mumbai": [
-      { "name": "Raj", "age": 25, "city": "Mumbai" }
+      { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" }
     ]
-  }
 }
 ```
 
 #### 2. Sort By
 - **Endpoint:** `GET /api/dataset/{datasetName}/query?sortBy={field}&order={asc/desc}`
-- **Example:** `/api/dataset/sampleDataset/query?sortBy=age&order=desc`
+- **Example:** `http://localhost:8080/api/dataset/sampleDataset/query?sortBy=age&order=desc`
 - **Response:**
 ```json
 {
   "sortedRecords": [
-    { "name": "Raj", "age": 25, "city": "Mumbai" },
-    { "name": "Naveen", "age": 22, "city": "Bangalore" }
+    { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" }
   ]
 }
 ```
 
 #### 3. Query a Specific Dataset
 - **Endpoint:** `GET /api/dataset/{datasetName}/query`
-- **Example:** `/api/dataset/sampleDataset/query?groupBy=city&sortBy=age&order=asc`
+- **Example:** `http://localhost:8080/api/dataset/sampleDataset/query?groupBy=city&sortBy=age&order=desc`
 - **Response:**
 ```json
 {
   "groupedRecords": {
     "Bangalore": [
-      { "name": "Naveen", "age": 22, "city": "Bangalore" }
-    ],
-    "Mumbai": [
-      { "name": "Raj", "age": 25, "city": "Mumbai" }
+      { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" }
     ]
   },
   "sortedRecords": [
-    { "name": "Naveen", "age": 22, "city": "Bangalore" },
-    { "name": "Raj", "age": 25, "city": "Mumbai" }
+    { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" },
   ]
 }
 ```
