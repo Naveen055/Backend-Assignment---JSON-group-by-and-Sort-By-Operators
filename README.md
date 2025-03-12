@@ -67,6 +67,7 @@ mvn clean install
 ```bash
 mvn spring-boot:run
 ```
+The application will start on `http://localhost:8080`
 
 ---
 
