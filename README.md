@@ -127,6 +127,7 @@ This API allows querying a specific dataset and performing group-by and sort-by 
 ```
 
 #### 3. Query a Specific Dataset
+- **Insert multiple Records**
 - **Endpoint:** `GET /api/dataset/{datasetName}/query`
 - **Example:** `http://localhost:8080/api/dataset/sampleDataset/query?groupBy=city&sortBy=age&order=desc`
 - **Response:**
@@ -134,11 +135,15 @@ This API allows querying a specific dataset and performing group-by and sort-by 
 {
   "groupedRecords": {
     "Bangalore": [
-      { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" }
+      { "name": "Naveen", "age": 22, "city": "Bangalore" }
+    ],
+    "Mumbai": [
+      { "name": "Raj", "age": 25, "city": "Mumbai" }
     ]
   },
   "sortedRecords": [
-    { "id": 1, "name": "Naveen", "age": 22, "city": "Bangalore" },
+    { "name": "Naveen", "age": 22, "city": "Bangalore" },
+    { "name": "Raj", "age": 25, "city": "Mumbai" }
   ]
 }
 ```
