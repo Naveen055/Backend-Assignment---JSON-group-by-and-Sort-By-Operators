@@ -21,6 +21,7 @@ JSON Group By and Sort By Operators is a Spring Boot REST API that allows users 
 - PostgreSQL
 - Hibernate
 - Maven
+- Postman(For testing)
 
 ---
 
